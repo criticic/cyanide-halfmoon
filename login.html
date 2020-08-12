@@ -20,29 +20,89 @@
         <!-- Reference: https://www.gethalfmoon.com/docs/modal -->
 
         <!-- Page wrapper start -->
-        <div class="page-wrapper with-navbar with-sidebar">
+        <div class="page-wrapper with-navbar with-sidebar" data-sidebar-type="overlayed-sm-and-down">
             <!-- Sticky alerts (toasts), empty container -->
             <!-- Reference: https://www.gethalfmoon.com/docs/sticky-alerts-toasts -->
             <div class="sticky-alerts"></div>
 
             <!-- Navbar start -->
-            <nav class="navbar">
-                <!-- Reference: https://www.gethalfmoon.com/docs/navbar -->
-<button id="toggle-sidebar-btn" class="btn btn-action" type="button" onclick="halfmoon.toggleSidebar()">
+        <nav class="navbar">
+            <div class="navbar-content">
+                <button id="toggle-sidebar-btn" class="btn btn-action" type="button" onclick="halfmoon.toggleSidebar()">
                     <i class="fa fa-bars" aria-hidden="true"></i>
                 </button>
-<a href="/docs/introduction/" class="navbar-brand ml-10 ml-sm-15">
-                <img src="https://www.gethalfmoon.com/static/halfmoon/img/hm-logo.svg" class="hidden-dm mr-5 mr-sm-10" alt="halfmoon-logo">
-                <img src="https://www.gethalfmoon.com/static/halfmoon/img/hm-logo-white.svg" class="hidden-lm mr-5 mr-sm-10" alt="halfmoon-logo-white">
+            </div>
+            <a href="/docs/introduction/" class="navbar-brand ml-10 ml-sm-15">
+                <img src="/static/halfmoon/img/hm-logo.svg" class="hidden-dm mr-5 mr-sm-10" alt="halfmoon-logo">
+                <img src="/static/halfmoon/img/hm-logo-white.svg" class="hidden-lm mr-5 mr-sm-10" alt="halfmoon-logo-white">
                 <span class="badge font-size-12 text-monospace px-5 px-sm-10">
                     v1.0.3
                 </span>
             </a>
-<button class="btn btn-action mr-5" type="button" onclick="halfmoon.toggleDarkMode()" aria-label="Toggle dark mode">
+            <ul class="navbar-nav hidden-sm-and-down">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="/docs/introduction/" class="nav-link">Documentation</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/license/" class="nav-link">License <span class="ml-5 text-monospace font-size-12">(MIT)</span></a>
+                </li>
+            </ul>
+            <div class="navbar-content ml-auto">
+
+                <!-- Github button container 1 start -->
+                <div class="pt-5 mr-5 d-none" id="gh-star-btn-container-1">
+                    <div class="hidden-dm">
+                        <a class="github-button" href="https://github.com/halfmoonui/halfmoon" data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star halfmoonui/halfmoon on GitHub">Star</a>
+                    </div>
+                    <div class="hidden-lm">
+                        <a class="github-button" href="https://github.com/halfmoonui/halfmoon" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star halfmoonui/halfmoon on GitHub">Star</a>
+                    </div>
+                </div>
+                <!-- Github button container 1 end -->
+                
+                <button class="btn btn-action mr-5" type="button" onclick="halfmoon.toggleDarkMode()" aria-label="Toggle dark mode">
                     <i class="fa fa-moon-o" aria-hidden="true"></i>
                 </button>
-            </nav>
-            <!-- Navbar end -->
+                <a href="/docs/download/" class="btn btn-primary hidden-sm-and-down" role="button">
+                    <i class="fa fa-cloud-download mr-5" aria-hidden="true"></i>
+                    Download
+                </a>
+                <div class="dropdown with-arrow hidden-md-and-up">
+                    <button class="btn navbar-menu-btn" data-toggle="dropdown" type="button" id="navbar-dropdown-toggle-btn" aria-haspopup="true" aria-expanded="false">
+                        <span class="text">Menu</span>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-dropdown-toggle-btn">
+                        <a href="/" class="dropdown-item">Home</a>
+                        <a href="/docs/introduction/" class="dropdown-item">Documentation</a>
+                        <a href="/license/" class="dropdown-item">License <span class="text-monospace font-size-12">(MIT)</span></a>
+                        <div class="dropdown-divider"></div>
+
+                        <!-- Github button container 2 start -->
+                        <div class="d-none pt-5" id="gh-star-btn-container-2">
+                            <div class="dropdown-content py-5 hidden-dm">
+                                <a class="github-button" href="https://github.com/halfmoonui/halfmoon" data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star halfmoonui/halfmoon on GitHub">Star</a>
+                            </div>
+                            <div class="dropdown-content py-5 hidden-lm">
+                                <a class="github-button" href="https://github.com/halfmoonui/halfmoon" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star halfmoonui/halfmoon on GitHub">Star</a>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                        <!-- Github button container 2 end -->
+
+                        <div class="dropdown-content">
+                            <a href="/docs/download/" class="btn btn-primary btn-download-sm" role="button">
+                                <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                                <span class="ml-5">Download</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
             <!-- Sidebar start -->
             <div class="sidebar">
