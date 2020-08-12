@@ -44,41 +44,42 @@
         1. https://www.gethalfmoon.com/docs/content-and-cards/#building-a-page
         2. https://www.gethalfmoon.com/docs/grid-system/#building-a-dashboard
       -->
-<div class="container-fluid">
-        <!-- First comes a content container -->
-        <div class="content">
-          <h1 class="content-title font-size-22"> <!-- font-size-22 = font-size: 2.2rem (22px) -->
-            Page title
-          </h1>
-          ...
-        </div>
-                <form action="..." method="..." class="w-400 mw-full">
-                    <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
-                    <div class="form-group">
-                        <label for="username" class="required">Username</label>
-                        <input type="text" class="form-control" id="username" placeholder="Username" required="required" />
-                        <div class="form-text">
-                            Only alphanumeric characters and underscores allowed.
+<div class="card p-0">
+                        <div class="content">
+                            <form action="#invalid-input-and-feedback" class="w-400 mw-full">
+                                <div class="form-group is-invalid">
+                                    <label for="username-2" class="required">Username</label>
+                                    <div class="invalid-feedback">
+                                        <ul>
+                                            <li>Username exceeds the maximum length of 20 characters.</li>
+                                            <li>Username can not contain dashes.</li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" class="form-control" id="username-2" placeholder="Username" required="required" value="my-really-long-username">
+                                    <div class="form-text">
+                                        Only alphanumeric characters and underscores allowed.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password-2" class="required">Password</label>
+                                    <input type="password" class="form-control" id="password-2" placeholder="Password" required="required" value="my-password">
+                                    <div class="form-text">
+                                        Must be at least 8 characters long, and contain at least one special character.
+                                    </div>
+                                </div>
+                                <div class="form-group is-invalid">
+                                    <label for="confirm-password-2" class="required">Confirm password</label>
+                                    <div class="invalid-feedback">
+                                        Does not match with the password above.
+                                    </div>
+                                    <input type="password" class="form-control" id="confirm-password-2" placeholder="Confirm password" required="required" value="mmyy-ppasswordd">
+                                    <div class="form-text">
+                                        Must match the above password exactly.
+                                    </div>
+                                </div>
+                                <input class="btn btn-primary btn-block mb-10" type="submit" value="Sign up">
+                            </form>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="password" class="required">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Password" required="required" />
-                        <div class="form-text">
-                            Must be at least 8 characters long, and contain at least one special character.
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="confirm-password" class="required">Confirm password</label>
-                        <input type="password" class="form-control" id="confirm-password" placeholder="Confirm password" required="required" />
-                        <div class="form-text">
-                            Must match the above password exactly.
-                        </div>
-                    </div>
-                    <input class="btn btn-primary btn-block" type="submit" value="Sign up" />
-                </form>
-            </div>
-</div>
             <!-- Content wrapper end -->
         </div>
         <!-- Page wrapper end -->
